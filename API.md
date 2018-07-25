@@ -288,4 +288,35 @@
     "false":"分配失败"
 }
 ```
+## 4.2 分配列表
 
+* GET/wish/assignlist
+
+- return :
+
+```json
+{
+    "code": 0,
+    "message": "",
+    "data": {
+        "assigned": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+            }
+        ],
+        "unasssigned": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+            }
+        ]
+    }
+}
+```
