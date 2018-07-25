@@ -266,10 +266,12 @@
 
 
 # 4. 管理员
-## 4.1. 分配
-* POST/wish/admassign
 
-* payload:
+## 4.1. 分配
+
+- POST/wish/admassign
+
+- payload:
 
 ```
 {
@@ -281,7 +283,7 @@
    
 ```
 
-* return
+- return
 
 ```
 {
@@ -291,7 +293,7 @@
 ```
 ## 4.2. 分配列表
 
-* GET/wish/assignlist
+- GET/wish/assignlist
 
 - return :
 
