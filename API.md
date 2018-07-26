@@ -287,9 +287,11 @@
 - return
 
 ```
+
 {
-    "true":"分配成功",
-    "false":"分配失败"
+    "code":0,
+    "message":"",
+    "data":null
 }
 ```
 ## 4.2. 分配列表
