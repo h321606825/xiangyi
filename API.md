@@ -324,7 +324,7 @@
                 "content": "内容，直接显示"
             }
         ]
-        "cancel": [
+        "cancel" : [
         {
                 "id": "心愿id",
                 "cancel_time": "发布时间，直接显示",
