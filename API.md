@@ -324,11 +324,11 @@
                 "content": "内容，直接显示"
             }
         ]
-        "done":[
+        "cancel": [
         {
                 "id": "心愿id",
-                "time": "发布时间，直接显示",
-                "deadline": "截止日期，直接显示",
+                "cancel_time": "发布时间，直接显示",
+                "cancel_reason": "取消原因，直接显示",
                 "content": "内容，直接显示"
         }
         ]
