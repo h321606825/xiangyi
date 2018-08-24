@@ -348,6 +348,15 @@
 - GET /wish/stulistall
 
 - return :
+{
+  undone:"未完成"，
+  unaccepted：‘未认领’
+  unconfirm：“未确认”
+  unevaluate：“未评价”
+  done：“已完成”
+  
+  
+}
 
 ```json
 {
