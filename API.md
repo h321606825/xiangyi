@@ -287,7 +287,7 @@
 ```json
 {
     "code": 0,
-    "message" : "",
+    "message": "",
     "data": null
 }
 ```
