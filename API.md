@@ -422,6 +422,7 @@
 ---
 
 ## 2.9. 管理心愿列表
+
  - GET /wish/admlist
  - return:
  
@@ -480,6 +481,7 @@
 ```
 ---
  ## 2.10. 学生确认
+ 
  - GET /wish/stuconfirm
  - return:
 ```json
@@ -492,6 +494,7 @@
 
 ---
 ## 2.11. 教师确认
+
  - GET /wish/teaconfirm
  - return:
 ```json
