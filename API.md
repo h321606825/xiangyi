@@ -16,7 +16,7 @@
   - [2.4. 获取心愿信息](#24-获取心愿信息)
   - [2.5. 取消心愿](#25-取消心愿)
   - [2.6. 接受心愿](#26-接受心愿)
-  - [2.7. 确认完成心愿](#27-确认完成心愿)
+  - [2.7. 评价完成心愿](#27-评价完成心愿)
 - [3. 图片](#3-图片)
   - [3.1 图片上传](#31-图片上传)
 - [4.管理员](#4-管理员)
@@ -134,9 +134,9 @@
 
 # 2. 心愿
 
-## 2.1. 心愿列表
+## 2.1. 老师心愿列表
 
-- GET /wish/list
+- GET /wish/tealist
 
 - return :
 
@@ -145,7 +145,17 @@
     "code": 0,
     "message": "",
     "data": {
-        "accepted": [
+        "undone":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+        }
+        ]
+        "unaccepted": [
             {
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
@@ -155,13 +165,29 @@
                 "work_time":"志愿时长，直接显示"
             }
         ],
-        "unaccepted": [
+        "unconfirm": [
             {
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示"
             }
+        ]
+        "unevaluate":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
+        ]
+        "done":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
         ]
     }
 }
@@ -294,7 +320,7 @@
 
 ---
 
-## 2.7. 确认完成心愿
+## 2.7. 评价完成心愿
 
 - POST /wish/confirm
 
@@ -319,7 +345,7 @@
 ---
 ## 2.8. 学生心愿列表
 
-- GET /wish/listall
+- GET /wish/stulistall
 
 - return :
 
@@ -328,7 +354,7 @@
     "code": 0,
     "message": "",
     "data": {
-        "assigned":[
+        "undone":[
         {
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
@@ -338,7 +364,7 @@
                 "work_time":"志愿时长，直接显示"
         }
         ]
-        "accepted": [
+        "unaccepted": [
             {
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
@@ -348,7 +374,7 @@
                 "work_time":"志愿时长，直接显示"
             }
         ],
-        "unaccepted": [
+        "unconfirm": [
             {
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
@@ -356,9 +382,82 @@
                 "content": "内容，直接显示"
             }
         ]
+        "unevaluate":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
+        ]
+        "done":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
+        ]
     }
 }
 ```
+---
+## 2.9.管理心愿列表
+ - GET /wish/admlist
+ - return:
+ 
+ 
+ ```json
+{
+    "code": 0,
+    "message": "",
+    "data": {
+        "undone":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+        }
+        ]
+        "unaccepted": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+            }
+        ],
+        "unconfirm": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+            }
+        ]
+        "unevaluate":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
+        ]
+        "done":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+        }
+        ]
+    }
+}
 ---
 
 # 3. 图片
