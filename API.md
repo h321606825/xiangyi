@@ -459,8 +459,9 @@
         ]
     }
 }
+```
 ---
-## 2.10. 学生确认
+ ## 2.10. 学生确认
  - GET /wish/stuconfirm
  - return:
 ```json
