@@ -67,6 +67,7 @@
 ```
 ## 1.2. 学生个人信息
 
+-GET /user/info
 - return :
 
 ```json
@@ -75,12 +76,25 @@
     "message": "",
     "data":
     {
-      "name":"学生信息,直接显示",
+      "name":"学生姓名,直接显示",
       "acc":"学生学号",
       "time":"时长，直接显示"
     }
 }
 ```
+
+## 1.3. 教师注册
+
+-POST /user/register
+- payload :
+
+```json
+{
+    "account": "账号",
+    "phone": "电话号"
+}
+```
+
 ---
 
 # 2. 心愿
