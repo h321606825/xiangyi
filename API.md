@@ -316,7 +316,49 @@
     "data": null
 }
 ```
+---
+## 2.8. 学生心愿列表
 
+- GET /wish/listall
+
+- return :
+
+```json
+{
+    "code": 0,
+    "message": "",
+    "data": {
+        "assigned":[
+        {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+        }
+        ]
+        "accepted": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示",
+                "quality":"完成质量,直接显示",
+                "work_time":"志愿时长，直接显示"
+            }
+        ],
+        "unaccepted": [
+            {
+                "id": "心愿id",
+                "time": "发布时间，直接显示",
+                "deadline": "截止日期，直接显示",
+                "content": "内容，直接显示"
+            }
+        ]
+    }
+}
+```
 ---
 
 # 3. 图片
