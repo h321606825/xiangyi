@@ -401,6 +401,7 @@
     }
 }
 ```
+---
 
 ## 2.9.管理心愿列表
  - GET /wish/admlist
@@ -458,6 +459,29 @@
         ]
     }
 }
+---
+## 2.10. 学生确认
+ - GET /wish/stuconfirm
+ - return:
+```json
+  {
+    "code":"0",
+    "message":"",
+    "data":null
+  }
+```
+
+---
+## 2.11. 教师确认
+ - GET /wish/teaconfirm
+ - return:
+```json
+  {
+    "code":"0",
+    "message":"",
+    "data":null
+  }
+```
 ---
 
 # 3. 图片
