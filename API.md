@@ -96,6 +96,39 @@
 }
 ```
 
+## 1.4. 修改电话
+
+-POST /user/alter
+- payload：
+```json
+{
+{ 
+  "phone":"联系方式"
+}
+```
+- return：
+```json
+{
+    "code": 0,
+    "message": ""
+}
+```
+
+## 1.5. 返回教师电话
+
+-POST /user/tea_phone
+
+- return：
+```json
+{
+    "code": 0,
+    "message": "",
+    "data":
+    {
+      "phone":"电话"
+    }
+}
+```
 ---
 
 # 2. 心愿
