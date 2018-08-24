@@ -70,7 +70,7 @@
 ```
 ## 1.2. 学生个人信息
 
--GET /user/info
+- GET /user/info
 - return :
 
 ```json
@@ -88,7 +88,7 @@
 
 ## 1.3. 教师注册
 
--POST /user/register
+- POST /user/register
 - payload :
 
 ```json
@@ -100,7 +100,7 @@
 
 ## 1.4. 修改电话
 
--POST /user/alter
+- POST /user/alter
 - payload：
 ```json
 {
@@ -117,7 +117,7 @@
 
 ## 1.5. 返回教师电话
 
--POST /user/tea_phone
+- GET /user/tea_phone
 
 - return：
 ```json
