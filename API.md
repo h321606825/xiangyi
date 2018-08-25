@@ -263,17 +263,32 @@
     "code": 0,
     "message": "",
     "data": {
-        "id": "心愿id",
-        "content": "心愿内容",
-        "img": "图片url",
-        "guy": "联系人",
-        "phone": "联系方式",
-        "deadline": "截止日期",
-        "angel": {
-            "guy": "认领人",
+          "done":[
+          {
+            "id": "心愿id",
+            "content": "心愿内容",
+            "quality": "评价等级",
+            "guy": "联系人",
             "phone": "联系方式",
-            "done": "是否已完成"
-        }
+            "deadline": "截止日期",
+            "angel": {
+                "guy": "认领人",
+                "phone": "联系方式"
+              }
+          }
+          ]
+          "undone":[
+          {
+            "id": "心愿id",
+            "content": "心愿内容",
+            "guy": "联系人",
+            "phone": "联系方式",
+            "deadline": "截止日期",
+            "angel": {
+               "guy": "认领人",
+                "phone": "联系方式"
+              }
+          }
     }
 }
 ```
