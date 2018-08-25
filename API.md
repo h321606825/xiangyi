@@ -155,7 +155,7 @@
 
 # 2. 心愿
 
-## 2.1. 教师心愿列表
+##  2.1.  教师心愿列表
 
 - GET /wish/tealist
 
@@ -172,8 +172,9 @@
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
+                "angel_guy": "学生姓名",
+                "angel_id":"学生学号",
+                "angel_phone":"学生联系方式"
         }
         ]
         "unaccepted": [
@@ -182,8 +183,6 @@
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
             }
         ]
         "unevaluate":[
@@ -191,7 +190,10 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                "angel_guy": "学生姓名",
+                "angel_id":"学生学号",
+                "angel_phone":"学生联系方式"
         }
         ]
         "done":[
@@ -199,7 +201,12 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                "work_time":"志愿时长",
+                "quality":"服务质量",
+                "angel_guy": "学生姓名",
+                "angel_id":"学生学号",
+                "angel_phone":"学生联系方式"
         }
         ]
     }
