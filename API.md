@@ -463,9 +463,7 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
+                "content": "内容，直接显示"
             }
         ],
         "unconfirm": [
@@ -489,7 +487,10 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content" : "内容，直接显示",
+                "angel_guy" : "学生姓名",
+                "angel_phone" : "学生电话",
+                "angel_id" : "学生学号"
         }
         ]
     }
@@ -571,7 +572,7 @@
 ```
 ## 4.2. 分配列表
 
-- GET/wish/assignlist
+- GET /wish/assignlist
 
 - return :
 
@@ -609,3 +610,21 @@
     }
 }
 ```
+ --- 
+ ## 4.3. 管理信息查询
+ - POST /wish/admchearch
+  - payload:
+  ```json
+    {
+      "angel_id":"学生学号"
+    }
+  ```
+ - return:
+ ```json
+  {
+    "angel_name":"学生姓名",
+    "angel_phone":"学生电话",
+    "work_time":"工作时长"
+  }
+ ```
+
