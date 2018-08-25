@@ -269,20 +269,18 @@
 
 - return :
 
+"done":"已完成",
+"undone":"未完成",
+"accept":"接受",
+"unaccept":"未接受"
+
 ```json
 {
     "code": 0,
     "message": "",
     "data": {
             "id": "心愿id",
-            "state":[
-              {
-                "done":"已完成",
-                "undone":"未完成",
-                "accept":"已接受但是未完成",
-                "unaccept":"未接受"
-              }
-            ]
+            "state":"done",
             "content": "心愿内容",
             "quality": "评价等级",
             "guy": "联系人",
@@ -500,8 +498,7 @@
 ---
  ## 2.10. 学生确认
  
- - GET /wish/stuconfirm
- - payload
+ - GET /wish/stuconfirm?
    - "id":"心愿id"
  - return:
 ```json
@@ -515,8 +512,8 @@
 ---
 ## 2.11. 教师确认
 
- - GET /wish/teaconfirm
- - payload
+ - GET /wish/teaconfirm?
+ 
    - "id":"心愿id"
  
  - return:
