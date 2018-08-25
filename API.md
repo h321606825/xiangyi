@@ -92,6 +92,18 @@
 }
 ```
 
+## 1.3.学生注册
+ 
+ - POST /user/register
+ - payload:
+ ```json
+{
+    "account": "账号",
+    "nickname":"学生姓名",
+    "phone": "电话号"
+}
+```
+
 ## 1.3. 教师注册
 
 - POST /user/register
