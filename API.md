@@ -94,7 +94,7 @@
 
 ## 1.3.学生注册
  
- - POST /user/register
+ - POST /user/stu_register
  - payload:
  ```json
 {
@@ -106,7 +106,7 @@
 
 ## 1.3. 教师注册
 
-- POST /user/register
+- POST /user/tea_register
 - payload :
 
 ```json
