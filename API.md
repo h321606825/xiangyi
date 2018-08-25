@@ -263,9 +263,15 @@
     "code": 0,
     "message": "",
     "data": {
-          "done":[
-          {
             "id": "心愿id",
+            "state":[
+              {
+                "done":"已完成",
+                "undone":"未完成",
+                "accept":"已接受但是未完成",
+                "unaccept":"未接受"
+              }
+            ]
             "content": "心愿内容",
             "quality": "评价等级",
             "guy": "联系人",
@@ -275,38 +281,6 @@
                 "guy": "认领人",
                 "phone": "联系方式"
               }
-          }
-          ]
-          "undone":[
-          {
-            "id": "心愿id",
-            "content": "心愿内容",
-            "phone": "联系方式",
-            "deadline": "截止日期",
-          }
-          ]
-          "accept":[
-          {
-            "id": "心愿id",
-            "content": "心愿内容",
-            "quality": "评价等级",
-            "guy": "联系人",
-            "phone": "联系方式",
-            "deadline": "截止日期",
-            "angel": {
-                "guy": "认领人",
-                "phone": "联系方式"
-              }
-          }
-          ]
-          "unaccept":[
-          {
-            "id": "心愿id",
-            "content": "心愿内容",
-            "phone": "联系方式",
-            "deadline": "截止日期",
-          }
-          ]
     }
 }
 ```
