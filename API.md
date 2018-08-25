@@ -74,7 +74,7 @@
 ```
 ## 1.2. 学生个人信息
 
-- GET /user/info
+- GET /user/stuinfo
 - return :
 
 ```json
@@ -123,7 +123,7 @@
 
 ## 1.5. 教师个人信息
 
-- GET /user/tea_phone
+- GET /user/tea_info
 
 - return：
 ```json
