@@ -74,7 +74,7 @@
 ```
 ## 1.2. 学生个人信息
 
-- GET /user/stuinfo
+- GET /user/stu_info
 - return :
 
 ```json
