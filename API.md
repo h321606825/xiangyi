@@ -518,7 +518,6 @@ GET /wish/resend
  - post：
  ```json
  {
-  "time":"发布时间"
   "deadline":"截止日期"
  }
  ```
