@@ -444,7 +444,8 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                ""
         }
         ]
         "unaccepted": [
