@@ -445,7 +445,9 @@
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示",
-                ""
+                "angel_id":"学生id",
+                "angel_guy":"学生姓名",
+                "angel_phone":"学生电话"
         }
         ]
         "unaccepted": [
@@ -461,7 +463,10 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                "angel_id":"学生id",
+                "angel_guy":"学生姓名",
+                "angel_phone":"学生电话"
             }
         ]
         "unevaluate":[
@@ -469,7 +474,10 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                "angel_id":"学生id",
+                "angel_guy":"学生姓名",
+                "angel_phone":"学生电话"
         }
         ]
         "done":[
