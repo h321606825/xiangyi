@@ -377,11 +377,8 @@
 {
   undone:"未完成"，
   unaccepted：‘未认领’
-  unconfirm：“未确认”
   unevaluate：“未评价”
   done：“已完成”
-  
-  
 }
 
 ```json
@@ -394,9 +391,7 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
+                "content": "内容，直接显示"
         }
         ]
         "unaccepted": [
@@ -404,19 +399,9 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
-            }
-        ],
-        "unconfirm": [
-            {
-                "id": "心愿id",
-                "time": "发布时间，直接显示",
-                "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示"
             }
-        ]
+        ],
         "unevaluate":[
         {
                 "id": "心愿id",
