@@ -73,7 +73,8 @@
 ```
 ## 1.2. 学生个人信息
 
-- GET /user/stu_info
+- POST /user/stu_info
+ - "acc":"学生学号"
 - return :
 
 ```json
@@ -146,30 +147,6 @@
       "acc":"工号",
       "name":"姓名",
       "phone":"电话"
-    }
-    ]
-}
-```
----
-## 1.2. 学生个人信息
-
-- GET /user/stu_info
-- payload:
-  
-  -"acc":"学生学号"
-
-- return :
-
-```json
-{
-    "code": 0,
-    "message": "",
-    "data":[
-    {
-      "name":"学生姓名,直接显示",
-      "acc":"学生学号",
-      "phone":"学生联系方式",
-      "time":"时长，直接显示"
     }
     ]
 }
