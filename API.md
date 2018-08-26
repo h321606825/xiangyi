@@ -280,7 +280,9 @@
     "message": "",
     "data": {
             "id": "心愿id",
-            "state":"done",
+            "state":[
+              "done":"1"
+            ]
             "content": "心愿内容",
             "quality": "评价等级",
             "guy": "联系人",
