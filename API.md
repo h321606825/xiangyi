@@ -287,6 +287,7 @@
             "quality": "评价等级",
             "guy": "联系人",
             "phone": "联系方式",
+            "time":"发布时间",
             "deadline": "截止日期",
             "angel": {
                 "guy": "认领人",
