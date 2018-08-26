@@ -527,6 +527,23 @@
   }
 ```
 ---
+## 2.12. 再次发送心愿
+GET /wish/resend
+ - id：心愿id
+ - post：
+ ```json
+ {
+  "time":"时间" 
+ }
+ ```
+ - retuen:
+ ```
+ {
+  "code":"0"
+  "message":""
+ }
+ ```
+---
 
 # 3. 图片
 
