@@ -74,7 +74,9 @@
 ## 1.2. 学生个人信息
 
 - POST /user/stu_info
- - "acc":"学生学号"
+```json
+  "acc":"学生学号"
+```
 - return :
 
 ```json
