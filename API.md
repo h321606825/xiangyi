@@ -454,9 +454,7 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示",
-                "quality":"完成质量,直接显示",
-                "work_time":"志愿时长，直接显示"
+                "content": "内容，直接显示"
         }
         ]
         "unaccepted": [
@@ -533,7 +531,8 @@ GET /wish/resend
  - post：
  ```json
  {
-  "time":"时间" 
+  "time":"发布时间"
+  "deadline":"截止日期"
  }
  ```
  - retuen:
