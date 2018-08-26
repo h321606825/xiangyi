@@ -269,10 +269,10 @@
 
 - return :
 
-"done":"已完成",
-"undone":"未完成",
-"accept":"接受",
-"unaccept":"未接受"
+"done":"1已完成",
+"undone":"2未完成",
+"unevaluate":"3未评价",
+"unaccept":"4未接受"
 
 ```json
 {
@@ -280,9 +280,7 @@
     "message": "",
     "data": {
             "id": "心愿id",
-            "state":[
-              "done":"1"
-            ]
+            "state":"1",
             "content": "心愿内容",
             "quality": "评价等级",
             "guy": "联系人",
