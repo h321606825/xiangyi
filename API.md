@@ -373,7 +373,7 @@
 ---
 ## 2.8. 学生心愿列表
 
-- GET /wish/stulistall
+- GET /wish/stulist
 
 - return :
 {
