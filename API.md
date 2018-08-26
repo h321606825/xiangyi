@@ -75,7 +75,7 @@
 
 - POST /user/stu_info
 ```json
-  "acc":"学生学号"
+  "account":"学生学号"
 ```
 - return :
 
