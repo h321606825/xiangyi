@@ -88,6 +88,7 @@
       "name":"学生姓名,直接显示",
       "acc":"学生学号",
       "phone":"学生联系方式",
+      "college":"学院",
       "time":"时长，直接显示"
     }
     ]
@@ -102,7 +103,8 @@
 {
     "account": "账号",
     "nickname":"学生姓名",
-    "phone": "电话号"
+    "phone": "电话号",
+    "college":"学院"
 }
 ```
 
@@ -114,7 +116,8 @@
 ```json
 {
     "account": "账号",
-    "phone": "电话号"
+    "phone": "电话号",
+    "college":"学院"
 }
 ```
 
@@ -124,7 +127,8 @@
 - payload：
 ```json
 {
-  "phone":"联系方式"
+  "phone":"联系方式",
+  "college":"学院"
 }
 ```
 - return：
@@ -148,7 +152,8 @@
     {
       "acc":"工号",
       "name":"姓名",
-      "phone":"电话"
+      "phone":"电话",
+      "college":"学院"
     }
     ]
 }
@@ -176,7 +181,8 @@
                 "content": "内容，直接显示",
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
-                "angel_phone":"学生联系方式"
+                "angel_phone":"学生联系方式",
+                "college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -195,7 +201,8 @@
                 "content": "内容，直接显示",
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
-                "angel_phone":"学生联系方式"
+                "angel_phone":"学生联系方式",
+                "college":"学生学院"
         }
         ]
         "done":[
@@ -209,6 +216,7 @@
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
                 "angel_phone":"学生联系方式"
+                "college":"学生学院"
         }
         ]
     }
@@ -287,11 +295,13 @@
             "quality": "评价等级",
             "guy": "联系人",
             "phone": "联系方式",
+            "college":"教师学院",
             "time":"发布时间",
             "deadline": "截止日期",
             "angel": {
                 "guy": "认领人",
-                "phone": "联系方式"
+                "phone": "联系方式",
+                "college":"学生学院"
               }
     }
 }
@@ -396,7 +406,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生学号",
                 "angel_guy"："学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -415,7 +426,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生学号",
                 "angel_guy"："学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
         }
         ]
         "done":[
@@ -448,9 +460,10 @@
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示",
-                "angel_id":"学生id",
+                "angel_id": "学生id",
                 "angel_guy":"学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -469,7 +482,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生id",
                 "angel_guy":"学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
             }
         ]
         "unevaluate":[
@@ -480,7 +494,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生id",
                 "angel_guy":"学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
         }
         ]
         "done":[
@@ -491,7 +506,8 @@
                 "content" : "内容，直接显示",
                 "angel_guy" : "学生姓名",
                 "angel_phone" : "学生电话",
-                "angel_id" : "学生学号"
+                "angel_id" : "学生学号",
+                "college":"学生学院"
         }
         ]
     }
