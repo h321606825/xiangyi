@@ -89,7 +89,7 @@
 
 ---
 ## 1.3. 学生个人信息
- - payload /user/stu-info
+ - GET /user/stu-info
    -  post:
  ```
  "account":"学号"
