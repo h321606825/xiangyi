@@ -51,6 +51,7 @@
     "account": "账号",
     "password": "密码",
     "name":"姓名",
+    "sex":"性别",
     "phone":"电话",
     "college":"学院"
 }
@@ -104,6 +105,7 @@
          "name":"姓名",
          "account":"学号",
          "phone":"联系方式",
+         "sex":"性别",
          "college":"学院",
          "time":"总时长"
      }
@@ -124,6 +126,7 @@
      {
          "name":"姓名",
          "account":"工号",
+         "sex":"性别",
          "phone":"联系方式",
          "college":"学院"
      }
