@@ -47,38 +47,16 @@
    - 5 ： 整理资料
    - 6 ： 辅导手机应用
    - 7 ： 读报
+ ```
+ undone : 待完成,
+ unaccepted : 待接受,
+ unevaluate : 待评价,
+ done : 已完成
+ ```
 ---
 
 # 1. 用户
-
-## 1.1. 学生注册
-
-- POST /user/stu-register
-- payload :
-
-```json
-{
-    "account": "账号",
-    "password": "密码",
-    "name":"姓名",
-    "sex":"性别",
-    "phone":"电话",
-    "college":"学院"
-}
-```
-
-- return :
-
-```json
-{
-    "code": 0,
-    "message": "",
-    "data": null
-}
-```
-
----
-## 1.2. 登录
+## 1.1. 登录
 
 - payload /user/login
 
@@ -99,7 +77,7 @@
   ```
 
 ---
-## 1.3.  学生个人信息
+## 1.2.  学生个人信息
  - GET /user/stu-info
    -  post:
  ```
