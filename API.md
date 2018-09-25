@@ -72,7 +72,13 @@
   {
     "code": 0,
     "message": "",
-    "data": null
+    "data": {
+          admin:{
+          1:管理员
+          2：老师
+          3：学生
+          }
+    }
   }
   ```
 
