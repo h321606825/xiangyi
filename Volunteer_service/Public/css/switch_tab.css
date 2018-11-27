@@ -1,0 +1,30 @@
+#switch-tab-container{
+
+	background-color: #f8f8f8;
+	position: fixed;
+    top: 42px;
+    z-index: 10;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+}
+#switch-tab-container ul.clearfix{
+	overflow: hidden;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	white-space: nowrap;
+}
+#switch-tab-container ul li{
+	box-sizing:border-box;
+	display:inline-block;
+	height:40px;
+	line-height:38px;
+	font-size:16px;
+	font-family:"微软雅黑";
+	padding-left:0.5em;
+	padding-right:0.5em;
+	cursor:pointer;
+	white-space: nowrap;
+}
+#switch-tab-container ul li.active{
+	color:#ff5f5f;
+}

@@ -1,0 +1,32 @@
+<toolbar id="toolbar">
+</toolbar>
+
+<!-- 表格 -->
+<table id="table" data-toggle="gridview" class="table table-hover" data-url="__URL__" data-toolbar="#toolbar" data-page-list="[1, 10, 25, 50, All]">
+    <thead>
+		<tr>
+			<th data-width="40" data-align="center" data-checkbox="true"></th>
+			<th data-width="150" data-field="job_number">工号</th>
+			<th data-width="85" data-field="name">姓名</th>
+			<th data-width="50" data-field="sex" data-formatter="fomat_status">性别</th>
+			<th data-width="100"  data-field="mobile" >手机号</th>
+			<th data-width="100"  data-field="a_name">学院</th>
+			<th data-width="100" data-field="m_a_time">互助时间余额</th>
+		</tr>
+	</thead>
+</table>
+<script type="text/javascript" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="/ueditor/ueditor.all.min.js"></script>
+<div style="display:none" id="editor"></div>
+<script type="text/javascript">
+//格式化数据
+function fomat_status(sex, row, index){
+	if(sex == 1){
+		return '男';
+	}else if(sex == 2){
+		return '女';
+	}else{
+		return '未知';
+	}
+}
+</script>

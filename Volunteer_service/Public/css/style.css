@@ -1,0 +1,309 @@
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+
+
+/*登录页样式*/
+
+.main {
+	width: 100%;
+	overflow: hidden;
+}
+
+.logo_con {
+	width: 100%;
+	margin-top: 15%;
+}
+
+.logo_center {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.logo_center img {
+	width: 100%;
+	max-height: 100%;
+	vertical-align: top;
+}
+
+.logo_con p {
+	text-align: center;
+	color: #fff;
+	margin-top: 7%;
+	margin-bottom: 4%;
+	font-size: 16px;
+}
+
+.logo_con h3 {
+	text-align: center;
+	color: #fff;
+	font-weight: 500;
+}
+
+.admin_box {
+	width: 85%;
+	background: #629DF3;
+	margin: 5% auto;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #4284F1;
+	overflow: hidden;
+}
+
+.admin_list {
+	width: 95%;
+	margin: 3% auto;
+}
+
+.admin_list ul li img {
+	width: 30px;
+	height: 30px;
+}
+
+#phone,
+#password {
+	position: relative;
+	top: -.6rem;
+	background: none;
+	border: none;
+	height: 20px;
+	font-size: 16px;
+	color: #9EC5FF;
+	text-indent: 5%;
+}
+
+#phone::-webkit-input-placeholder,
+#password::-webkit-input-placeholder {
+	color: #9EC5FF;
+}
+
+#phone::-moz-placeholder,
+#password::-moz-placeholder {
+	color: #9EC5FF;
+}
+
+#phone:-ms-input-placeholder,
+#password:-ms-input-placeholder {
+	color: #9EC5FF;
+}
+
+input,
+#submit {
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent
+}
+
+#submit {
+	width: 86%;
+	margin: 2rem auto;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #046ac3;
+	padding: 10px 0px;
+	border-radius: 20px;
+}
+
+.weui-navbar__item {
+	cursor: pointer;
+}
+
+.weui-navbar+.weui-tab__panel {
+	padding-top: 60px !important;
+	padding-bottom: 70px !important;
+}
+
+.weui-navbar__item:after {
+	border-right: none !important;
+}
+
+.weui-navbar:after {
+	border-bottom: 1px solid #EBEBEB !important;
+}
+
+.weui-navbar__item {
+	color: #4d4d4d !important;
+	position: relative;
+	padding: 7px 0px !important;
+}
+
+.on {
+	border-bottom: 2px solid #55ADED !important;
+}
+
+.weui-navbar {
+	background-color: #ffffff !important;
+}
+
+.img_por {
+	position: relative;
+	width: 25px;
+	height: 28px;
+	margin-right: 3%;
+	top: .5rem;
+}
+
+.position_top {
+	position: relative;
+	top: -.3rem;
+}
+
+.weui-media-box_appmsg .weui-media-box__hd {
+	width: 50px !important;
+	height: 50px !important;
+}
+
+.weui-media-box__desc {
+	font-weight: 400 !important;
+	font-size: 17px !important;
+	color: #4D4D4D !important;
+}
+
+.weui-media-box_appmsg {
+	-webkit-box-align: flex-start !important;
+	-webkit-align-items: flex-start !important;
+	align-items: flex-start !important;
+}
+
+.weui-form-preview__item {
+	font-size: .9em;
+	text-align: right;
+	color: #B7B7B7;
+	line-height: 2;
+	margin: 5px auto;
+	height: 26px;
+	font-size: 15px;
+}
+
+.weui-form-preview__label {
+	color: #B7B7B7 !important;
+	font-size: 15px;
+}
+
+.weui-form-preview__label:after {
+	content: '';
+	width: 100%;
+	display: inline-block;
+}
+
+.weui-form-preview__value {
+	text-align: left !important;
+}
+
+.weui-media-box__bd {
+	position: relative;
+}
+
+.ckxq {
+	position: absolute;
+	right: 1.8rem;
+	bottom: 1rem;
+	background: #4DA9EC;
+	font-size: 14px;
+	padding: 4px 15px;
+	color: #fff;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.detail_box {
+	margin: 15px auto 25px auto;
+}
+
+.detail_time {
+	display: inline-block;
+	float: left;
+	color: #7F7F7F;
+}
+
+.detail_zt {
+	display: inline-block;
+	float: right;
+	color: #7F7F7F;
+}
+
+.detail_zt ul li {
+	float: right;
+}
+
+.upload {
+	text-decoration: underline;
+	color: #40B0FC;
+	cursor: pointer;
+}
+
+.show_center,
+.result_center {
+	padding: 20px;
+	position: relative;
+}
+
+.color_7F7F7F {
+	color: #7F7F7F;
+}
+
+.color_FF5555 {
+	color: #FF5555;
+}
+
+.color_red {
+	position: absolute;
+	top: 10%;
+	left: 2%;
+	color: red;
+}
+
+.smbtn {
+	width: 90%;
+	background: #40B0FC;
+	display: block;
+	text-align: center;
+	color: #fff;
+	padding: 7px;
+	margin: 0 auto;
+	border-radius: 20px;
+	font-size: 17px;
+	margin-top: 8%;
+	margin-bottom: 20%;
+}
+
+@media (max-width:320px) {
+	.weui-media-box__desc {
+		font-size: 14px !important;
+	}
+	.weui-form-preview__item,
+	.weui-form-preview__label {
+		font-size: 13px !important;
+	}
+	.ckxq {
+		right: 1rem !important;
+	}
+	.logo_con p {
+		font-size: 14px;
+	}
+	.logo_con h3 {
+		font-size: 16px;
+	}
+	#phone,
+	#password {
+		font-size: 14px;
+	}
+	.logo_center {
+		width: 100px;
+		height: 100px;
+	}
+	.detail_zt,
+	.detail_time{
+		font-size: 14px;
+	}
+	.weui__text{
+		font-size: 15px !important;
+	}
+}

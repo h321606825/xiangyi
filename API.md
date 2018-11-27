@@ -4,34 +4,34 @@
 
 - [0. tips](#0-tips)
 - [1. 用户](#1-用户)
-  - [1.1. 登录](#11-登录)
-  - [1.2. 学生个人信息](#12-学生个人信息)
-  - [1.3. 教师注册](#13-教师注册)
-  - [1.4. 修改电话](#14-修改电话)
-  - [1.5. 教师个人信息](#15-教师个人信息)
+  - [1.1. 学生注册](#11-学生注册)
+  - [1.2. 登录](#12-登录)
+  - [1.3. 学生个人信息](#13学生个人信息)
+  - [1.4. 教师个人信息](#14教师个人信息)
 - [2. 心愿](#2-心愿)
-  - [2.1. 教师心愿列表](#21-心愿列表)
-  - [2.2. 发布心愿（获取页面数据）](#22-发布心愿（获取页面数据）)
-  - [2.3. 发布心愿（发布）](#23-发布心愿（发布）)
-  - [2.4. 获取心愿信息](#24-获取心愿信息)
-  - [2.5. 取消心愿](#25-取消心愿)
-  - [2.6. 接受心愿](#26-接受心愿)
-  - [2.7. 评价完成心愿](#27-评价完成心愿)
-  - [2.8. 学生心愿列表](#28-学生心愿列表)
-  - [2.9. 管理心愿列表](#29-管理心愿列表)
-  - [2.10. 学生确认](#210-学生确认)
-- [3. 图片](#3-图片)
-  - [3.1 图片上传](#31-图片上传)
-- [4.管理员](#4-管理员)
-  - [4.1. 分配](#41-分配)
-  - [4.2. 分配列表](#42-分配列表)
-  - [4.3. 管理信息查询](#43-管理信息查询)
+  - [2.1. 教师列表](#21-教师列表)
+  - [2.2. 发布心愿（发布）](#22-发布心愿（发布）)
+  - [2.3. 获取心愿信息](#23-获取心愿信息)
+  - [2.4. 取消心愿](#24-取消心愿)
+  - [2.5. 接受心愿](#25-接受心愿)
+  - [2.6. 评价完成心愿](#26-评价完成心愿)
+  - [2.7. 学生心愿列表](#27-学生心愿列表)
+  - [2.8. 管理心愿列表](#28-管理心愿列表)
+  - [2.9. 学生确认](#29-学生确认)
+- [3. 管理员](#3-管理员)
+  - [3.1. 分配](#31-分配)
+  - [3.2. 分配列表](#32-分配列表)
+  - [3.3. 管理信息查询](#33-管理信息查询)
+  - [3.4. 管理心愿文件导出](#34-管理心愿文件导出)
+  - [3.5. 管理教师信息录入](#35-管理教师信息录入)
+  - [3.6. 管理时长导出](#36-管理时长导出)
+
 
 <!-- /TOC -->
 
 # 0. tips
 
-- 以下所有url的根均为 http://wish.jblog.info/v1
+- 以下所有url的根均为 http://
 - code :
   - 0 : 一切正常
   - 1 : 直接将 message 展示给用户
@@ -41,15 +41,18 @@
 
 # 1. 用户
 
-## 1.1. 登录
+## 1.1. 学生注册
 
-- POST /user/login
+- POST /user/stu-register
 - payload :
 
 ```json
 {
     "account": "账号",
-    "password": "密码"
+    "password": "密码",
+    "name":"姓名",
+    "phone":"电话",
+    "college":"学院"
 }
 ```
 
@@ -59,105 +62,79 @@
 {
     "code": 0,
     "message": "",
-    "data": 
-    {
-        "admin":
-        {
-            "1": "管理员",
-            "2": "老师",
-            "3":"学生"
-        }
-        
-    }
+    "data": null
 }
 ```
-## 1.2. 学生个人信息
 
-- POST /user/stu_info
-```json
-  "account":"学生学号"
-```
-- return :
+---
+## 1.2. 登录
 
-```json
-{
+- payload /user/login
+
+  - post:
+  ```
+  {
+      "accound":"账号",
+      "password":"密码"
+  }
+  ```
+  - return：
+  ```json
+  {
     "code": 0,
     "message": "",
-    "data":[
-    {
-      "name":"学生姓名,直接显示",
-      "acc":"学生学号",
-      "phone":"学生联系方式",
-      "time":"时长，直接显示"
-    }
-    ]
-}
-```
+    "data": null
+  }
+  ```
 
-## 1.3.学生注册
- 
- - POST /user/stu_register
- - payload:
+---
+## 1.3. 学生个人信息
+ - payload /user/stu-info
+   -  post:
+ ```
+ "account":"学号"
+ ```
+  - return:
  ```json
-{
-    "account": "账号",
-    "nickname":"学生姓名",
-    "phone": "电话号"
-}
-```
+ {
+     "code":0,
+     "message":"",
+     "data":[
+     {
+         "name":"姓名",
+         "account":"学号",
+         "phone":"联系方式",
+         "college":"学院",
+         "time":"总时长"
+     }
+     ]
+ }
+``` 
+---
 
-## 1.3. 教师注册
-
-- POST /user/tea_register
-- payload :
-
-```json
-{
-    "account": "账号",
-    "phone": "电话号"
-}
-```
-
-## 1.4. 修改电话
-
-- POST /user/alter
-- payload：
-```json
-{
-  "phone":"联系方式"
-}
-```
-- return：
-```json
-{
-    "code": 0,
-    "message": ""
-}
-```
-
-## 1.5. 教师个人信息
-
-- GET /user/tea_info
-
-- return：
-```json
-{
-    "code": 0,
-    "message": "",
-    "data":[
-    {
-      "acc":"工号",
-      "name":"姓名",
-      "phone":"电话"
-    }
-    ]
-}
-```
+## 1.4. 教师个人信息
+- GET /user/tea-info
+  
+  - return:
+ ```json
+ {
+     "code":0,
+     "message":"",
+     "data":[
+     {
+         "name":"姓名",
+         "account":"工号",
+         "phone":"联系方式",
+         "college":"学院"
+     }
+     ]
+ }
+ ```
 ---
 
 # 2. 心愿
 
-##  2.1.  教师心愿列表
+## 2.1. 教师列表
 
 - GET /wish/tealist
 
@@ -176,7 +153,8 @@
                 "content": "内容，直接显示",
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
-                "angel_phone":"学生联系方式"
+                "angel_phone":"学生联系方式",
+                "angel_college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -195,7 +173,8 @@
                 "content": "内容，直接显示",
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
-                "angel_phone":"学生联系方式"
+                "angel_phone":"学生联系方式",
+                "angel_college":"学生学院"
         }
         ]
         "done":[
@@ -209,6 +188,7 @@
                 "angel_guy": "学生姓名",
                 "angel_id":"学生学号",
                 "angel_phone":"学生联系方式"
+                "angel_college":"学生学院"
         }
         ]
     }
@@ -217,9 +197,24 @@
 
 ---
 
-## 2.2. 发布心愿（获取页面数据）
 
-- GET /wish/pubPage
+---
+
+## 2.2. 学生发布心愿（发布）
+
+- POST /wish/stu-pub
+
+- payload :
+
+```json
+{
+    "content": "心愿内容",
+    "guy": "联系人",
+    "phone": "联系方式",
+    "deadline": "截止时间",
+    "college":"学院"
+}
+```
 
 - return :
 
@@ -227,28 +222,32 @@
 {
     "code": 0,
     "message": "",
-    "data": {
-        "guy": "联系人",
-        "phone": "联系方式"
-    }
+    "data": null
 }
 ```
-
 ---
+## 2.3. 教师发布心愿（发布）
 
-## 2.3. 发布心愿（发布）
-
-- POST /wish/pub
+- POST /wish/tea-pub
 
 - payload :
 
 ```json
 {
     "content": "心愿内容",
-    "img": "图片url，通过图片上传方法获取",
     "guy": "联系人",
     "phone": "联系方式",
-    "deadline": "截止时间"
+    "deadline": "截止时间",
+    "college":"学院"
+    "kind":{
+        1:"购物类",
+        2:"取邮件",
+        3:"校园出行",
+        4:"上门陪伴",
+        5:"资料整理",
+        7:"读报",
+        0:"其他"
+    }
 }
 ```
 
@@ -264,44 +263,66 @@
 
 ---
 
-## 2.4. 获取心愿信息
+## 2.3. 获取心愿信息
 
 - GET /wish/info?
   - id : 心愿id
 
 - return :
-
-"done":"1已完成",
-"undone":"2未完成",
-"unevaluate":"3未评价",
-"unaccept":"4未接受"
+    "done":"1已完成",
+    "undone":"2未完成",
+    "unevaluate":"3未评价",
+    "unaccept":"4未接受"
 
 ```json
 {
     "code": 0,
     "message": "",
     "data": {
-            "id": "心愿id",
-            "state":"1",
-            "content": "心愿内容",
-            "quality": "评价等级",
-            "guy": "联系人",
+        "id": "心愿id",
+        "content": "心愿内容",
+        "img": "图片url",
+        "guy": "联系人",
+        "college":"学院",
+        "phone": "联系方式",
+        "deadline": "截止日期",
+        "angel": {
+            "guy": "认领人",
             "phone": "联系方式",
-            "time":"发布时间",
-            "deadline": "截止日期",
-            "angel": {
-                "guy": "认领人",
-                "phone": "联系方式"
-              }
+            "done": "是否已完成",
+            "college":"学院"
+        }
     }
 }
 ```
 
 ---
 
-## 2.5. 取消心愿
+## 2.4. 学生取消心愿
 
-- POST /wish/cancel
+- POST /wish/stu-cancel
+
+- payload :
+```json
+{
+    "id": "心愿id",
+    "reason": "取消原因"
+}
+```
+
+- return :
+
+```json
+{
+    "code": 0,
+    "message": "",
+    "data": null
+}
+```
+---
+## 2.5. 教师取消心愿
+
+- POST /wish/tea-cancel
 
 - payload :
 ```json
@@ -323,16 +344,17 @@
 
 ---
 
-## 2.6. 接受心愿
+## 2.5. 学生接受心愿
 
-- POST /wish/accept
+- POST /wish/stu-accept
 
 - payload :
 ```json
 {
     "id": "心愿id",
-    "guy": "联系人"
-    "phone": "联系方式"
+    "name":"学生姓名",
+    "phone": "学生联系方式",
+    "college":"学院"
 }
 ```
 
@@ -345,10 +367,33 @@
     "data": null
 }
 ```
+---
+## 2.5. 教师接受心愿
 
+- POST /wish/tea-accept
+
+- payload :
+```json
+{
+    "id": "心愿id",
+    "name":"姓名",
+    "phone": "联系方式",
+    "college":"学院"
+}
+```
+
+- return :
+
+```json
+{
+    "code": 0,
+    "message": "",
+    "data": null
+}
+```
 ---
 
-## 2.7. 评价完成心愿
+## 2.6. 评价完成心愿
 
 - POST /wish/confirm
 
@@ -371,17 +416,19 @@
 }
 ```
 ---
-## 2.8. 学生心愿列表
+## 2.7. 学生心愿列表
 
 - GET /wish/stulist
 
 - return :
+```
 {
-  undone:"未完成"，
-  unaccepted：‘未认领’
-  unevaluate：“未评价”
-  done：“已完成”
+  undone:"未完成",
+  unaccepted："未认领",
+  unevaluate："未评价",
+  done："已完成"
 }
+```
 
 ```json
 {
@@ -396,7 +443,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生学号",
                 "angel_guy"："学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -415,7 +463,8 @@
                 "content": "内容，直接显示",
                 "angel_id":"学生学号",
                 "angel_guy"："学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "angel_college":"学生学院"
         }
         ]
         "done":[
@@ -423,15 +472,18 @@
                 "id": "心愿id",
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
-                "content": "内容，直接显示"
+                "content": "内容，直接显示",
+                "angel_id":"学生学号",
+                "angel_guy"："学生姓名",
+                "angel_phone":"学生电话",
+                "angel_college":"学生学院"
         }
         ]
     }
 }
 ```
 ---
-
-## 2.9. 管理心愿列表
+## 2.8. 管理心愿列表
 
  - GET /wish/admlist
  - return:
@@ -448,9 +500,10 @@
                 "time": "发布时间，直接显示",
                 "deadline": "截止日期，直接显示",
                 "content": "内容，直接显示",
-                "angel_id":"学生id",
+                "angel_id": "学生id",
                 "angel_guy":"学生姓名",
-                "angel_phone":"学生电话"
+                "angel_phone":"学生电话",
+                "angel_college":"学生学院"
         }
         ]
         "unaccepted": [
@@ -498,7 +551,7 @@
 }
 ```
 ---
- ## 2.10. 学生确认
+ ## 2.9. 学生确认
  
  - GET /wish/stuconfirm?
    - "id":"心愿id"
@@ -513,50 +566,32 @@
 
 ---
 
-# 3. 图片
 
-## 3.1. 图片上传
+# 3. 管理员
+## 3.1. 分配
+* POST/wish/admassign
 
-- POST /img/upload
-
-- return :
-
-```json
-    "code": 0,
-    "message": "",
-    "data": "图片url"
-```
-
-
-# 4. 管理员
-
-## 4.1. 分配
-
-- POST/wish/admassign
-
-- payload:
+* payload:
 
 ```
 {
      "id":"心愿id",
-     "angel_id":"学号",
+     "angel_id":"学生学号"
      "angel_guy":"要分配的人员姓名",
      "angel_phone":"要分配的人员联系方式"
 }
    
 ```
 
-- return
+* return
 
 ```
-
 {
-    "code":0,
-    "message":"",
-    "data":null
+    "true":"分配成功",
+    "false":"分配失败"
 }
 ```
-## 4.2. 分配列表
+## 3.2. 分配列表
 
 - GET /wish/assignlist
 
@@ -597,7 +632,7 @@
 }
 ```
  --- 
- ## 4.3. 管理信息查询
+ ## 3.3. 管理信息查询
  - POST /wish/admchearch
   - payload:
   ```json
@@ -613,4 +648,47 @@
     "work_time":"工作时长"
   }
  ```
-
+ ---
+## 3.4. 管理审核发布（学生）
+- POST /wish/adm-check-stu
+- paylode:
+```
+  - "do":{
+      1:是
+      0：否（拒绝）
+  }
+```
+- return:
+  ```
+  {
+      "code":0,
+      "message":"",
+      "data":null
+  }
+  ```
+ ---
+ ## 3.5. 管理审核发布（学生）
+- POST /wish/adm-check-tea
+- paylode:
+```
+  - "do":{
+      1:是
+      0：否（拒绝）
+  }
+```
+- return:
+  ```
+  {
+      "code":0,
+      "message":"",
+      "data":null
+  }
+  ```
+ 
+---
+## 3.4. 管理心愿文件导出
+---
+## 3.5. 管理教师信息录入
+---
+## 3.6. 管理时长导出
+---
